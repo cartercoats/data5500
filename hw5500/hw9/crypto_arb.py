@@ -44,7 +44,7 @@ for node in g:
     for node2 in g:
         if node != node2:
             # Finds all the paths
-            print("paths from",node, "to",node2)
+            # print("paths from",node, "to",node2)
             paths = nx.all_simple_paths(g, node, node2)
             for path in paths:
                 # ---- FORWARD WEIGHT ----
@@ -68,9 +68,9 @@ for node in g:
                 # ---- TOTAL ROUND-TRIP VALUE ----
                 roundtrip = forward * reverse
 
-                print(path, forward)
-                print(rev_path, reverse)
-                print(roundtrip)
+                # print(path, forward)
+                # print(rev_path, reverse)
+                # print(roundtrip)
                 if roundtrip > largest_weight:
                     largest_weight = roundtrip
                     largest_paths = [path,rev_path]
